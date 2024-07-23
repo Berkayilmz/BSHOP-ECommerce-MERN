@@ -64,5 +64,14 @@ const orderSchema = mongoose.Schema({
     type: Boolean,
     required: true,
     default: false,
-  }
+  },
+  deliveredAt: {
+    rtpe: Date,
+  },
+},{
+  timestamps: true,
 });
+
+const Order = mongoose.model("Order", orderSchema);
+
+export default Order;
